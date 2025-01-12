@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ギャラリー | 大阪の夜景ガイド</title>
+    <meta name="description" content="大阪の美しい夜景を写真で紹介">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="lightbox/css/lightbox.min.css" rel="stylesheet">
+    <style>
+        /* ギャラリーのスタイル */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .gallery-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            max-width: 300px;
+        }
+
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Lightbox の矢印カスタマイズ */
+        .lb-prev,
+        .lb-next {
+            font-size: 2rem;
+            color: white;
+            text-shadow: 0 0 5px black;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lb-prev:hover,
+        .lb-next:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ヘッダー -->
+    <header class="page-header wrapper">
+        <h1><a href="index.html">大阪の夜景ガイドホーム</a></h1>
+        <nav>
+            <ul class="main-nav">
+                <li><a href="spots.html">夜景スポット</a></li>
+                <li><a href="gallery.html">ギャラリー</a></li>
+                <li><a href="iphone-tips.html">iPhone撮影のコツ</a></li>
+                <li><a href="contact.html">コンタクト</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main id="gallery" class="big-bg">
+        <div class="wrapper">
+            <h2 class="page-title">大阪の夜景ギャラリー</h2>
+            <p>大阪の美しい夜景を写真でお楽しみください。</p>
+
+            <div class="gallery">
+                <div class="gallery-item">
+                    <div>
+                        <a href="images/yakei1@2x.jpeg" data-lightbox="image-set"><img src="images/yakei1.jpeg"></a>
+                        <h4>十三峠展望台</h4>
+                        <p class="recommendation">綺麗さ: ★★★☆☆</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div>
+                        <a href="images/yakei2.jpeg" data-lightbox="image-set"><img src="images/yakei2.jpeg"></a>
+                        <h4>生駒山 僕らの広場</h4>
+                        <p class="recommendation">綺麗さ: ★★★★★</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div>
+                        <a href="images/yakei3.jpeg" data-lightbox="image-set"><img src="images/yakei3.jpeg"></a>
+                        <h4>彩都なないろ公園</h4>
+                        <p class="recommendation">綺麗さ: ★★★★★</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div>
+                        <a href="images/yakei4.jpeg" data-lightbox="image-set"><img src="images/yakei4.jpeg"></a>
+                        <h4>大阪城</h4>
+                        <p class="recommendation">綺麗さ: ★★★★★</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div>
+                        <a href="images/yakei5.jpeg" data-lightbox="image-set"><img src="images/yakei5.jpeg"></a>
+                        <h4>五月山 五月平展望台</h4>
+                        <p class="recommendation">綺麗さ: ★★★★☆</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div>
+                        <a href="images/yakei6@2x.jpeg" data-lightbox="image-set"><img src="images/yakei6.jpeg"></a>
+                        <h4>水呑地蔵院</h4>
+                        <p class="recommendation">綺麗さ: ★★★★☆</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- フッター -->
+    <footer>
+        <div class="wrapper">
+            <p><small>&copy; 2024 Osaka Night Views</small></p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="lightbox/js/lightbox-plus-jquery.min.js"></script>
+    <script>
+        lightbox.option({
+            'albumLabel': '',
+            'wrapAround': true // 最後の画像の次に最初の画像を表示
+        });
+    </script>
+</body>
+
+</html>
